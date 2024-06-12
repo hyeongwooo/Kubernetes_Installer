@@ -19,3 +19,6 @@ chmod +x Automatically_installing_Kubernetes/k8s_auto_install.sh
 ```sh
 sudo ./Automatically_installing_Kubernetes/k8s_auto_install.sh
 ```
+
+## 추가
+- 2024.06.12 : Snapshot 전용 자동설치 파일 추가
