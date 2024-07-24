@@ -1,6 +1,6 @@
 #!/bin/bash
 
-#1. 시스템 업그레이드
+#1. system upgrade
 echo "System Upgrade..."
 sudo apt-get update && sudo apt-get upgrade -y
 
