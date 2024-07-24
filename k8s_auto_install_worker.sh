@@ -60,5 +60,3 @@ systemctl restart containerd
 echo "swap off Set..."
 sudo sed -i '/ swap / s/^\(.*\)$/#\1/g' /etc/fstab
 sudo swapoff -a
-
-apt-get install bash-completion
