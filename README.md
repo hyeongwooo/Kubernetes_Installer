@@ -13,12 +13,12 @@ git clone https://github.com/WoogiBoogi1129/Automatically_installing_Kubernetes.
 
 - sh파일 권한 부여
 ```sh
-chmod +x Automatically_installing_Kubernetes/k8s_auto_install.sh
+chmod +x Automatically_installing_Kubernetes/k8s_auto_install_master.sh
 ```
 
 - sh 파일 실행
 ```sh
-sudo ./Automatically_installing_Kubernetes/k8s_auto_install.sh
+sudo ./Automatically_installing_Kubernetes/k8s_auto_install_master.sh
 ```
 
 ### Worker Node 설치
@@ -29,12 +29,13 @@ git clone https://github.com/WoogiBoogi1129/Automatically_installing_Kubernetes.
 
 - sh파일 권한 부여
 ```sh
-chmod +x Automatically_installing_Kubernetes/k8s_auto_install_snapshot.sh
+chmod +x Automatically_installing_Kubernetes/k8s_auto_install_worker.sh
 ```
 
 - sh 파일 실행
 ```sh
-sudo ./Automatically_installing_Kubernetes/k8s_auto_install_snapshot.sh
+sudo ./Automatically_installing_Kubernetes/k8s_auto_install_worker.sh
 ```
 ## 추가
-- 2024.06.12 : Snapshot 전용 자동설치 파일 추가
+- 2024.06.12: Snapshot 전용 자동설치 파일 추가
+- 2024.07.24: Master, Worker로 Installer 명칭 변경 및 최적화
