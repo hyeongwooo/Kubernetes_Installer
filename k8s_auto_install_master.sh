@@ -47,7 +47,7 @@ sudo systemctl enable --now kubelet
 #6. CGroup Configure
 echo "Cgroup Configuring..."
 sudo mkdir -p /etc/containerd
-containerd config default
+containerd config default | sudo tee /etc/containerd/config.toml
 sudo sed -i 's/SystemdCgroup = false/SystemdCgroup = true/g' /etc/containerd/config.toml
 sudo systemctl restart containerd
 
