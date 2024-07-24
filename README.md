@@ -5,6 +5,7 @@
 - Cluster: Kubeadm
 
 ## 사용방법
+### Master Node 설치
 - git clone 명령어를 이용하여 로컬로 파일 가져오기.
 ```sh
 git clone https://github.com/WoogiBoogi1129/Automatically_installing_Kubernetes.git
@@ -20,5 +21,20 @@ chmod +x Automatically_installing_Kubernetes/k8s_auto_install.sh
 sudo ./Automatically_installing_Kubernetes/k8s_auto_install.sh
 ```
 
+### Worker Node 설치
+- git clone 명령어를 이용하여 로컬로 파일 가져오기.
+```sh
+git clone https://github.com/WoogiBoogi1129/Automatically_installing_Kubernetes.git
+```
+
+- sh파일 권한 부여
+```sh
+chmod +x Automatically_installing_Kubernetes/k8s_auto_install_snapshot.sh
+```
+
+- sh 파일 실행
+```sh
+sudo ./Automatically_installing_Kubernetes/k8s_auto_install_snapshot.sh
+```
 ## 추가
 - 2024.06.12 : Snapshot 전용 자동설치 파일 추가
