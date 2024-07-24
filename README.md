@@ -1,6 +1,6 @@
 # Automatically_installing_Kubernetes
 쿠버네티스 자동 쉘 스크립트 v1.29
-- 가끔 Kubernetes 실습하다가 하기 싫을 때가 있습니다. 매번 밀어버리고 다시 설치하는 것도 일이라고 생각해서 만들었습니다.
+- Kubernetes 클러스터 자동 설치 스크립트입니다.
 - Version: 1.29v
 - Cluster: Kubeadm
 
