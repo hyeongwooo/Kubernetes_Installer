@@ -49,7 +49,7 @@ echo "Cgroup Configuring..."
 sudo mkdir -p /etc/containerd
 containerd config default | sudo tee /etc/containerd/config.toml
 sudo sed -i 's/SystemdCgroup = false/SystemdCgroup = true/g' /etc/containerd/config.toml
-systemctl restart containerd
+sudo systemctl restart containerd
 
 #7. swap-off
 echo "swap off Set..."
