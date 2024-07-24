@@ -44,32 +44,25 @@ sudo apt-get install -y kubelet kubeadm kubectl
 sudo apt-mark hold kubelet kubeadm kubectl
 sudo systemctl enable --now kubelet
 
-#6. Containerd Install
-echo "Containerd Install..."
-sudo apt-get install -y containerd.io
-
-#7. CGroup Configure
+#6. CGroup Configure
 echo "Cgroup Configuring..."
 sudo mkdir -p /etc/containerd
 containerd config default | sudo tee /etc/containerd/config.toml
 sudo sed -i 's/SystemdCgroup = false/SystemdCgroup = true/g' /etc/containerd/config.toml
 systemctl restart containerd
 
-#8. swap-off
+#7. swap-off
 echo "swap off Set..."
 sudo sed -i '/ swap / s/^\(.*\)$/#\1/g' /etc/fstab
 sudo swapoff -a
 
-#9. Master Node Setting
+#8. Master Node Setting
 echo "Master Node Setting..."
 kubeadm init --pod-network-cidr=10.244.0.0/16
 mkdir -p $HOME/.kube
 sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
 sudo chown $(id -u):$(id -g) $HOME/.kube/config
 
-#10. CNI Install
+#9. CNI Install
 echo "CNI Install..."
 kubectl apply -f https://github.com/flannel-io/flannel/releases/latest/download/kube-flannel.yml
-kubectl taint nodes --all node-role.kubernetes.io/control-plane-
-
-apt-get install bash-completion
