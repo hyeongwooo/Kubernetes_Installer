@@ -8,34 +8,35 @@
 ### Master Node 설치
 - git clone 명령어를 이용하여 로컬로 파일 가져오기.
 ```sh
-git clone https://github.com/WoogiBoogi1129/Automatically_installing_Kubernetes.git
+git clone https://github.com/WoogiBoogi1129/Kubernetes_Installer.git
 ```
 
 - sh파일 권한 부여
 ```sh
-chmod +x Automatically_installing_Kubernetes/k8s_auto_install_master.sh
+chmod +x Kubernetes_Installer/k8s_auto_install_master.sh
 ```
 
 - sh 파일 실행
 ```sh
-sudo ./Automatically_installing_Kubernetes/k8s_auto_install_master.sh
+sudo ./Kubernetes_Installer/k8s_auto_install_master.sh
 ```
 
 ### Worker Node 설치
 - git clone 명령어를 이용하여 로컬로 파일 가져오기.
 ```sh
-git clone https://github.com/WoogiBoogi1129/Automatically_installing_Kubernetes.git
+git clone https://github.com/WoogiBoogi1129/Kubernetes_Installer.git
 ```
 
 - sh파일 권한 부여
 ```sh
-chmod +x Automatically_installing_Kubernetes/k8s_auto_install_worker.sh
+chmod +x Kubernetes_Installer/k8s_auto_install_worker.sh
 ```
 
 - sh 파일 실행
 ```sh
-sudo ./Automatically_installing_Kubernetes/k8s_auto_install_worker.sh
+sudo ./Kubernetes_Installer/k8s_auto_install_worker.sh
 ```
 ## 추가
 - 2024.06.12: Snapshot 전용 자동설치 파일 추가
 - 2024.07.24: Master, Worker로 Installer 명칭 변경 및 최적화
+- 2024.07.26: Repository 이름 변경
