@@ -54,9 +54,10 @@ sudo sed -i '/ swap / s/^\(.*\)$/#\1/g' /etc/fstab
 sudo swapoff -a
 
 # 8. Bash Completion 설치
+apt install bash-completion
 source /usr/share/bash-completion/bash_completion
 echo 'source <(kubectl completion bash)' >>~/.bashrc
 echo 'alias k=kubectl' >>~/.bashrc
 echo 'complete -F __start_kubectl k' >>~/.bashrc
 
-echo "Kubernetes setup completed successfully!"
+echo "Kubernetes setup completed successfully! Please restart shell."
