@@ -40,3 +40,4 @@ sudo ./Kubernetes_Installer/k8s_auto_install_worker.sh
 - 2024.06.12: Snapshot 전용 자동설치 파일 추가
 - 2024.07.24: Master, Worker로 Installer 명칭 변경 및 최적화
 - 2024.07.26: Repository 이름 변경
+- 2024.08.08: Bash Completion 설치 기능 추가 및 코드 최적화
