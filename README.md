@@ -36,6 +36,13 @@ chmod +x Kubernetes_Installer/k8s_auto_install_worker.sh
 ```sh
 sudo ./Kubernetes_Installer/k8s_auto_install_worker.sh
 ```
+
+## Single Node에서 Kubernetes 설치
+Single Node에서 Kubernetes를 설치할 경우, Master Node가 Worker Node 역할 또한 수행할 수 있도록 아래 명령을 통해 Taint를 제거해야합니다.
+```sh
+kubectl taint nodes --all node-role.kubernetes.io/control-plane-
+```
+
 ## 추가
 - 2024.06.12: Snapshot 전용 자동설치 파일 추가
 - 2024.07.24: Master, Worker로 Installer 명칭 변경 및 최적화
