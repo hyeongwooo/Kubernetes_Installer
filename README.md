@@ -49,3 +49,4 @@ kubectl taint nodes --all node-role.kubernetes.io/control-plane-
 - 2024.07.26: Repository 이름 변경
 - 2024.08.08: Bash Completion 설치 기능 추가 및 코드 최적화
 - 2024.09.26: Forwarding IPv4 and letting iptables see bridged traffic 설정 누락으로 인한 에러 발생 확인[수정]
+- 2024.12.02: Shell 진행사항 보일 수 있도록 초록 문구로 강조 추가(Master, Worker 포함)
