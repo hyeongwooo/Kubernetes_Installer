@@ -52,17 +52,17 @@ print_green "Docker installed successfully."
 
 # 4. Kubernetes 설치
 print_green "Kubernetes Install..."
-curl -fsSL https://pkgs.k8s.io/core:/stable:/v1.29/deb/Release.key | sudo gpg --dearmor -o /etc/apt/keyrings/kubernetes-apt-keyring.gpg
+curl -fsSL https://pkgs.k8s.io/core:/stable:/v1.33/deb/Release.key | sudo gpg --dearmor -o /etc/apt/keyrings/kubernetes-apt-keyring.gpg
 echo 'deb [signed-by=/etc/apt/keyrings/kubernetes-apt-keyring.gpg] https://pkgs.k8s.io/core:/stable:/v1.29/deb/ /' | sudo tee /etc/apt/sources.list.d/kubernetes.list
 print_green "Kubernetes repository added."
 
 # 5. kubeadm, kubelet, kubectl 설치
 print_green "Kubeadm, Kubelet, Kubectl Install..."
 sudo apt-get update
-sudo apt-get install -y kubelet kubeadm kubectl
+sudo apt-get install -y kubelet=1.33.0-1.1 kubeadm=1.33.0-1.1 kubectl=1.33.0-1.1
 sudo apt-mark hold kubelet kubeadm kubectl
 sudo systemctl enable --now kubelet
-print_green "Kubeadm, Kubelet, Kubectl installed successfully."
+print_green "Kubeadm, Kubelet, Kubectl v1.33.0 installed successfully."
 
 # 6. CGroup 설정
 print_green "Cgroup Configuring..."
