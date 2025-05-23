@@ -59,7 +59,7 @@ print_green "Kubernetes repository added."
 # 5. kubeadm, kubelet, kubectl 설치
 print_green "Kubeadm, Kubelet, Kubectl Install..."
 sudo apt-get update
-sudo apt-get install -y kubelet=1.33.0-1.1 kubeadm=1.33.0-1.1 kubectl=1.33.0-1.1
+sudo apt-get install -y kubelet kubeadm kubectl
 sudo apt-mark hold kubelet kubeadm kubectl
 sudo systemctl enable --now kubelet
 print_green "Kubeadm, Kubelet, Kubectl v1.33.0 installed successfully."
